@@ -1,0 +1,41 @@
+@model SistemaTitulos.Models.MiembroTribunal
+
+@{
+    ViewData["Title"] = "Eliminar Miembro del Tribunal";
+}
+
+<div class="container mt-4">
+    <h1 class="my-4">Eliminar Miembro del Tribunal</h1>
+
+    <h3 class="my-4">¿Estás seguro de que quieres eliminar esto?</h3>
+    <div>
+        <h4 class="my-4">Miembro del Tribunal</h4>
+        <hr />
+        <dl class="row mt-3">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.NombreCompleto)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.NombreCompleto)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Especialidad)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Especialidad)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Activo)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Activo)
+            </dd>
+        </dl>
+        
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Eliminar" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-secondary ms-2">Volver al Listado</a>
+        </form>
+    </div>
+</div>
