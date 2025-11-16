@@ -61,7 +61,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local:
     dotnet ef database update
 
     # Cargar datos iniciales usando el script SQL
-    sqlcmd -S localhost -d SistemaTitulosDB -U devarmin -P"armin2DEV9949257" -i ./seed_data.sql
+    sqlcmd -S localhost -d SistemaTitulosDB -U devarmin -P"armin2DEV9949257" -i ./seed_data.sql -C
     ```
     **Nota:** El script `seed_data.sql` limpiará las tablas `MiembroTribunalSolicitud`, `Solicitudes`, `MiembroTribunal` y `Tutor` antes de insertar los nuevos datos.
 
