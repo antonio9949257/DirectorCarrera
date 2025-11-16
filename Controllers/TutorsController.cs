@@ -18,14 +18,11 @@ namespace SistemaTitulos.Controllers
         {
             _context = context;
         }
-
-        // GET: Tutors
         public async Task<IActionResult> Index()
         {
             return View(await _context.Tutor.ToListAsync());
         }
 
-        // GET: Tutors/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,15 +40,11 @@ namespace SistemaTitulos.Controllers
             return View(tutor);
         }
 
-        // GET: Tutors/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Tutors/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,NombreCompleto,Especialidad,Activo")] Tutor tutor)
@@ -65,7 +58,6 @@ namespace SistemaTitulos.Controllers
             return View(tutor);
         }
 
-        // GET: Tutors/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,9 +73,6 @@ namespace SistemaTitulos.Controllers
             return View(tutor);
         }
 
-        // POST: Tutors/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,NombreCompleto,Especialidad,Activo")] Tutor tutor)
@@ -116,7 +105,6 @@ namespace SistemaTitulos.Controllers
             return View(tutor);
         }
 
-        // GET: Tutors/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +122,6 @@ namespace SistemaTitulos.Controllers
             return View(tutor);
         }
 
-        // POST: Tutors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

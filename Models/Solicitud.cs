@@ -27,7 +27,6 @@ namespace SistemaTitulos.Models
 
         public string? Estado { get; set; }
 
-        // Propiedades para la relación con Tutor (HU-DC-02)
         [Display(Name = "Tutor Asignado")]
         public int? TutorId { get; set; }
 
@@ -41,7 +40,6 @@ namespace SistemaTitulos.Models
         [Display(Name = "Nombre del Proyecto")]
         public string NombreProyecto { get; set; }
 
-        // Propiedad de navegación para la relación muchos a muchos con MiembroTribunal (HU-DC-03)
         public virtual ICollection<MiembroTribunal> MiembrosTribunal { get; set; }
     }
 }

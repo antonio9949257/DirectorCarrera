@@ -102,7 +102,7 @@ namespace SistemaTitulos.Documents
                     foreach (var miembro in _solicitud.MiembrosTribunal)
                     {
                         table.Cell().Text(miembro.NombreCompleto);
-                        table.Cell().BorderBottom(1).Text(" "); // Espacio para la firma
+                        table.Cell().BorderBottom(1).Text(" ");
                     }
                 });
 

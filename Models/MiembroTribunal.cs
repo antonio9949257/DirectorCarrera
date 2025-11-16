@@ -16,7 +16,6 @@ namespace SistemaTitulos.Models
 
         public bool Activo { get; set; } = true;
 
-        // Propiedad de navegación para la relación muchos a muchos
         public virtual ICollection<Solicitud> Solicitudes { get; set; } = new List<Solicitud>();
     }
 }

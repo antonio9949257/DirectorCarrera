@@ -19,5 +19,26 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: #2C3E50; /* Deep Indigo for a cheerful, robust, dark feel */
+  background-color: #000000; 
+  color: white;
+}
+
+.table-hover tbody tr:hover {
+  background-color: #FFD700;
+  color: black;
+}
+
+.table.text-white th,
+.table.text-white td {
+  color: white;
+}
+
+.bg-dark .form-control {
+  background-color: #343a40; 
+  color: white;
+  border-color: #6c757d; 
+}
+
+.bg-dark .form-control::placeholder {
+  color: #ced4da; 
 }

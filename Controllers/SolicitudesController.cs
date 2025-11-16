@@ -21,7 +21,6 @@ namespace SistemaTitulos.Controllers
             _context = context;
         }
 
-        // GET: Solicitudes
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Solicitudes.Include(s => s.Tutor);
@@ -30,28 +29,31 @@ namespace SistemaTitulos.Controllers
 
         public async Task<IActionResult> Panel(string searchString, int? tutorId, string estado)
         {
-            var solicitudes = from s in _context.Solicitudes
-                              .Include(s => s.Tutor)
-                              .Include(s => s.MiembrosTribunal)
-                              select s;
+            var allSolicitudes = await _context.Solicitudes.ToListAsync();
+            var solicitudCountsByEstado = allSolicitudes
+                .GroupBy(s => s.Estado)
+                .ToDictionary(g => g.Key, g => g.Count());
+
+            var solicitudesQuery = from s in _context.Solicitudes
+                                   .Include(s => s.Tutor)
+                                   .Include(s => s.MiembrosTribunal)
+                                   select s;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                solicitudes = solicitudes.Where(s => s.NombreEstudiante.Contains(searchString));
+                solicitudesQuery = solicitudesQuery.Where(s => s.NombreEstudiante.Contains(searchString));
             }
 
             if (tutorId.HasValue)
             {
-                solicitudes = solicitudes.Where(s => s.TutorId == tutorId.Value);
+                solicitudesQuery = solicitudesQuery.Where(s => s.TutorId == tutorId.Value);
             }
 
             if (!String.IsNullOrEmpty(estado))
             {
-                solicitudes = solicitudes.Where(s => s.Estado == estado);
+                solicitudesQuery = solicitudesQuery.Where(s => s.Estado == estado);
             }
 
-            ViewData["TutorIdFilter"] = new SelectList(_context.Tutor, "Id", "NombreCompleto", tutorId);
-            
             var estadosList = new List<SelectListItem>
             {
                 new SelectListItem { Value = SolicitudEstados.Pendiente, Text = "Pendiente" },
@@ -64,13 +66,21 @@ namespace SistemaTitulos.Controllers
                 new SelectListItem { Value = SolicitudEstados.Finalizado, Text = "Finalizado" },
                 new SelectListItem { Value = SolicitudEstados.Archivado, Text = "Archivado" }
             };
-            ViewData["EstadoFilter"] = new SelectList(estadosList, "Value", "Text", estado);
 
+            var viewModel = new PanelViewModel
+            {
+                Solicitudes = await solicitudesQuery.ToListAsync(),
+                SolicitudCountsByEstado = solicitudCountsByEstado,
+                SearchString = searchString,
+                TutorId = tutorId,
+                Estado = estado,
+                TutorIdFilter = new SelectList(await _context.Tutor.ToListAsync(), "Id", "NombreCompleto", tutorId),
+                EstadoFilter = new SelectList(estadosList, "Value", "Text", estado)
+            };
 
-            return View(await solicitudes.ToListAsync());
+            return View(viewModel);
         }
 
-        // GET: Solicitudes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -90,7 +100,6 @@ namespace SistemaTitulos.Controllers
             return View(solicitud);
         }
 
-        // GET: Solicitudes/GenerarActaPDF/5
         public async Task<IActionResult> GenerarActaPDF(int id)
         {
             var solicitud = await _context.Solicitudes
@@ -109,13 +118,11 @@ namespace SistemaTitulos.Controllers
             return File(pdfBytes, "application/pdf", $"Acta_Defensa_{solicitud.NombreEstudiante}.pdf");
         }
 
-        // GET: Solicitudes/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Solicitudes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,NombreEstudiante,Carrera,FechaSolicitud,NombreProyecto,Estado")] Solicitud solicitud)
@@ -129,7 +136,6 @@ namespace SistemaTitulos.Controllers
             return View(solicitud);
         }
 
-        // GET: Solicitudes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -163,7 +169,6 @@ namespace SistemaTitulos.Controllers
             return View(viewModel);
         }
 
-        // POST: Solicitudes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, AsignacionTribunalViewModel viewModel)
@@ -173,7 +178,6 @@ namespace SistemaTitulos.Controllers
                 return NotFound();
             }
 
-            // Custom validation to ensure at least the basic fields of the request are valid.
             if (string.IsNullOrWhiteSpace(viewModel.Solicitud.NombreEstudiante) || string.IsNullOrWhiteSpace(viewModel.Solicitud.Carrera))
             {
                 ModelState.AddModelError("Solicitud.NombreEstudiante", "Los campos básicos de la solicitud son requeridos.");
@@ -181,10 +185,8 @@ namespace SistemaTitulos.Controllers
 
             if (!ModelState.IsValid)
             {
-                // Repopulate necessary data for the view if validation fails
                 ViewData["TutorId"] = new SelectList(_context.Tutor, "Id", "NombreCompleto", viewModel.Solicitud.TutorId);
                 
-                // Repopulate MiembrosDisponibles for the view
                 var todosLosMiembros = await _context.MiembroTribunal.ToListAsync();
                 viewModel.MiembrosDisponibles = todosLosMiembros.Select(miembro => new MiembroTribunalAsignado
                 {
@@ -196,7 +198,6 @@ namespace SistemaTitulos.Controllers
                 return View(viewModel);
             }
 
-            // Re-fetch the entity to update it (since we used AsNoTracking earlier)
             var solicitudToUpdate = await _context.Solicitudes
                 .Include(s => s.MiembrosTribunal)
                 .FirstOrDefaultAsync(s => s.Id == id);
@@ -206,7 +207,6 @@ namespace SistemaTitulos.Controllers
                 return NotFound();
             }
 
-            // Update basic properties of the request
             solicitudToUpdate.NombreEstudiante = viewModel.Solicitud.NombreEstudiante;
             solicitudToUpdate.Carrera = viewModel.Solicitud.Carrera;
             solicitudToUpdate.FechaSolicitud = viewModel.Solicitud.FechaSolicitud;
@@ -215,7 +215,6 @@ namespace SistemaTitulos.Controllers
             solicitudToUpdate.TutorId = viewModel.Solicitud.TutorId;
             solicitudToUpdate.CalificacionFinal = viewModel.Solicitud.CalificacionFinal;
 
-            // Update tribunal
             solicitudToUpdate.MiembrosTribunal.Clear();
             if (viewModel.MiembrosDisponibles != null)
             {
@@ -248,7 +247,6 @@ namespace SistemaTitulos.Controllers
         }
 
 
-        // GET: Solicitudes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -267,7 +265,6 @@ namespace SistemaTitulos.Controllers
             return View(solicitud);
         }
 
-        // POST: Solicitudes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

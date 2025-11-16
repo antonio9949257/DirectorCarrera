@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/devadam/SistemaTitulos/SistemaTitulos.csproj": {}
+    "/home/devadam/DirectorCarrera/SistemaTitulos.csproj": {}
   },
   "projects": {
-    "/home/devadam/SistemaTitulos/SistemaTitulos.csproj": {
+    "/home/devadam/DirectorCarrera/SistemaTitulos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/devadam/SistemaTitulos/SistemaTitulos.csproj",
+        "projectUniqueName": "/home/devadam/DirectorCarrera/SistemaTitulos.csproj",
         "projectName": "SistemaTitulos",
-        "projectPath": "/home/devadam/SistemaTitulos/SistemaTitulos.csproj",
+        "projectPath": "/home/devadam/DirectorCarrera/SistemaTitulos.csproj",
         "packagesPath": "/home/devadam/.nuget/packages/",
-        "outputPath": "/home/devadam/SistemaTitulos/obj/",
+        "outputPath": "/home/devadam/DirectorCarrera/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/devadam/.nuget/NuGet/NuGet.Config"

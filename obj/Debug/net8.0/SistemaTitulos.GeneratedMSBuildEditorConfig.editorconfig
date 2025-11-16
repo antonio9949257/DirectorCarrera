@@ -17,103 +17,103 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SistemaTitulos
 build_property.RootNamespace = SistemaTitulos
-build_property.ProjectDir = /home/devadam/SistemaTitulos/
+build_property.ProjectDir = /home/devadam/DirectorCarrera/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/devadam/SistemaTitulos
+build_property.MSBuildProjectDirectory = /home/devadam/DirectorCarrera
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/devadam/SistemaTitulos/Views/Home/Index.cshtml]
+[/home/devadam/DirectorCarrera/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Home/Privacy.cshtml]
+[/home/devadam/DirectorCarrera/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/MiembrosTribunal/Create.cshtml]
+[/home/devadam/DirectorCarrera/Views/MiembrosTribunal/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWllbWJyb3NUcmlidW5hbC9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/MiembrosTribunal/Delete.cshtml]
+[/home/devadam/DirectorCarrera/Views/MiembrosTribunal/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWllbWJyb3NUcmlidW5hbC9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/MiembrosTribunal/Details.cshtml]
+[/home/devadam/DirectorCarrera/Views/MiembrosTribunal/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWllbWJyb3NUcmlidW5hbC9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/MiembrosTribunal/Edit.cshtml]
+[/home/devadam/DirectorCarrera/Views/MiembrosTribunal/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWllbWJyb3NUcmlidW5hbC9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/MiembrosTribunal/Index.cshtml]
+[/home/devadam/DirectorCarrera/Views/MiembrosTribunal/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTWllbWJyb3NUcmlidW5hbC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Shared/Error.cshtml]
+[/home/devadam/DirectorCarrera/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/home/devadam/DirectorCarrera/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Solicitudes/Create.cshtml]
+[/home/devadam/DirectorCarrera/Views/Solicitudes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29saWNpdHVkZXMvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Solicitudes/Delete.cshtml]
+[/home/devadam/DirectorCarrera/Views/Solicitudes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29saWNpdHVkZXMvRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Solicitudes/Details.cshtml]
+[/home/devadam/DirectorCarrera/Views/Solicitudes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29saWNpdHVkZXMvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Solicitudes/Edit.cshtml]
+[/home/devadam/DirectorCarrera/Views/Solicitudes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29saWNpdHVkZXMvRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Solicitudes/Index.cshtml]
+[/home/devadam/DirectorCarrera/Views/Solicitudes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29saWNpdHVkZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Solicitudes/Panel.cshtml]
+[/home/devadam/DirectorCarrera/Views/Solicitudes/Panel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU29saWNpdHVkZXMvUGFuZWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Tutors/Create.cshtml]
+[/home/devadam/DirectorCarrera/Views/Tutors/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHV0b3JzL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Tutors/Delete.cshtml]
+[/home/devadam/DirectorCarrera/Views/Tutors/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHV0b3JzL0RlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Tutors/Details.cshtml]
+[/home/devadam/DirectorCarrera/Views/Tutors/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHV0b3JzL0RldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Tutors/Edit.cshtml]
+[/home/devadam/DirectorCarrera/Views/Tutors/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHV0b3JzL0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Tutors/Index.cshtml]
+[/home/devadam/DirectorCarrera/Views/Tutors/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHV0b3JzL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/_ViewImports.cshtml]
+[/home/devadam/DirectorCarrera/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/_ViewStart.cshtml]
+[/home/devadam/DirectorCarrera/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/devadam/SistemaTitulos/Views/Shared/_Layout.cshtml]
+[/home/devadam/DirectorCarrera/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-9o8hdzthi2

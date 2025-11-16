@@ -5,7 +5,6 @@
     ViewData["Title"] = "Editar Solicitud y Asignar Tribunal";
     var estados = new List<SelectListItem>
     {
-        // Estados del Proceso de Modalidad de Graduación (Principales)
         new SelectListItem { Value = SolicitudEstados.Pendiente, Text = $"{SolicitudEstados.Pendiente}: Solicitud recién registrada, aún no revisada." },
         new SelectListItem { Value = SolicitudEstados.Observada, Text = $"{SolicitudEstados.Observada}: Solicitud revisada con errores o datos incompletos." },
         new SelectListItem { Value = SolicitudEstados.Aceptada, Text = $"{SolicitudEstados.Aceptada}: Solicitud aprobada formalmente (inicio del proceso)." },
@@ -15,8 +14,6 @@
         new SelectListItem { Value = SolicitudEstados.EnEvaluacionDefensaProgramada, Text = $"{SolicitudEstados.EnEvaluacionDefensaProgramada}: La defensa está agendada, pendiente de calificación." },
         new SelectListItem { Value = SolicitudEstados.Finalizado, Text = $"{SolicitudEstados.Finalizado}: Se registró la nota final, se cerró el proceso." },
         new SelectListItem { Value = SolicitudEstados.Archivado, Text = $"{SolicitudEstados.Archivado}: El proceso fue cerrado y almacenado en el histórico." },
-
-        // Estados internos de cada Historia de Usuario (funcionalidades específicas)
         new SelectListItem { Value = SolicitudEstados.Borrador, Text = $"{SolicitudEstados.Borrador}: Solicitud en creación, no enviada." },
         new SelectListItem { Value = SolicitudEstados.SinTutor, Text = $"{SolicitudEstados.SinTutor}: No se ha asignado un tutor." },
         new SelectListItem { Value = SolicitudEstados.TutorPendiente, Text = $"{SolicitudEstados.TutorPendiente}: Tutor propuesto, pendiente de confirmación." },
