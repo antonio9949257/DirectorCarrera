@@ -1,5 +1,7 @@
 # Sistema de Gestión de Modalidad de Graduación
+## Screenshots
 
+![Screen 1](Screen1.png)
 ## Descripción del Proyecto
 
 Este proyecto es una aplicación web desarrollada con el framework .NET 8 MVC, diseñada para automatizar y digitalizar el proceso académico de titulación de estudiantes universitarios. El sistema centraliza las operaciones que el Director de Carrera realiza durante el proceso de graduación, incluyendo el registro y validación de solicitudes, asignación de tutores y tribunales, seguimiento de proyectos, y registro de calificaciones finales.
@@ -136,11 +138,6 @@ El desarrollo continuará con la implementación de las siguientes historias de 
 *   **Finalizar HU-DC-03**: Asegurar que la generación de PDF sea completamente funcional y esté integrada.
 *   **Mejoras en el Panel de Seguimiento**: Posibles adiciones de gráficos o visualizaciones más avanzadas.
 *   **Refinamiento de UI/UX**: Continuar mejorando la experiencia del usuario y la estética general de la aplicación.
-
-## Screenshots
-
-![Screen 1](Screen1.png)
-![Screen 2](Screen2.png)
 
 ## Contacto
 
