@@ -137,6 +137,11 @@ El desarrollo continuará con la implementación de las siguientes historias de 
 *   **Mejoras en el Panel de Seguimiento**: Posibles adiciones de gráficos o visualizaciones más avanzadas.
 *   **Refinamiento de UI/UX**: Continuar mejorando la experiencia del usuario y la estética general de la aplicación.
 
+## Screenshots
+
+![Screen 1](Screen1.png)
+![Screen 2](Screen2.png)
+
 ## Contacto
 
 Para cualquier consulta o contribución, por favor contacta al equipo de desarrollo.
