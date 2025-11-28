@@ -109,9 +109,13 @@
                     @Html.DisplayFor(modelItem => item.CalificacionFinal)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Editar</a>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">Detalles</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info me-1">Editar</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-secondary me-1">Detalles</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger me-1">Eliminar</a>
+                    @if (item.TutorId != null)
+                    {
+                        <a asp-action="GenerarActaDesignacionTutorPDF" asp-route-id="@item.Id" class="btn btn-sm btn-success" target="_blank">Acta Tutor</a>
+                    }
                 </td>
             </tr>
     }

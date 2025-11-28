@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/devadam/DirectorCarrera/SistemaTitulos.csproj": {}
+    "/home/devadam/Desktop/DirectorCarrera/SistemaTitulos.csproj": {}
   },
   "projects": {
-    "/home/devadam/DirectorCarrera/SistemaTitulos.csproj": {
+    "/home/devadam/Desktop/DirectorCarrera/SistemaTitulos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/devadam/DirectorCarrera/SistemaTitulos.csproj",
+        "projectUniqueName": "/home/devadam/Desktop/DirectorCarrera/SistemaTitulos.csproj",
         "projectName": "SistemaTitulos",
-        "projectPath": "/home/devadam/DirectorCarrera/SistemaTitulos.csproj",
+        "projectPath": "/home/devadam/Desktop/DirectorCarrera/SistemaTitulos.csproj",
         "packagesPath": "/home/devadam/.nuget/packages/",
-        "outputPath": "/home/devadam/DirectorCarrera/obj/",
+        "outputPath": "/home/devadam/Desktop/DirectorCarrera/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/devadam/.nuget/NuGet/NuGet.Config"
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.415/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.416/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

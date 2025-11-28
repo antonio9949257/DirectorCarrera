@@ -118,6 +118,28 @@ namespace SistemaTitulos.Controllers
             return File(pdfBytes, "application/pdf", $"Acta_Defensa_{solicitud.NombreEstudiante}.pdf");
         }
 
+        public async Task<IActionResult> GenerarActaDesignacionTutorPDF(int id)
+        {
+            var solicitud = await _context.Solicitudes
+                .Include(s => s.Tutor)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (solicitud == null)
+            {
+                return NotFound();
+            }
+
+            if (solicitud.TutorId == null || solicitud.Tutor == null)
+            {
+                return BadRequest("La solicitud no tiene un tutor asignado.");
+            }
+
+            var document = new ActaDesignacionTutorDocument(solicitud);
+            var pdfBytes = document.GeneratePdf();
+
+            return File(pdfBytes, "application/pdf", $"Acta_Designacion_Tutor_{solicitud.NombreEstudiante}.pdf");
+        }
+
         public IActionResult Create()
         {
             return View();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XRah0vun2BA=",
+  "dgSpecHash": "1YS2p7sA/aM=",
   "success": true,
-  "projectFilePath": "/home/devadam/DirectorCarrera/SistemaTitulos.csproj",
+  "projectFilePath": "/home/devadam/Desktop/DirectorCarrera/SistemaTitulos.csproj",
   "expectedPackageFiles": [
     "/home/devadam/.nuget/packages/azure.core/1.25.0/azure.core.1.25.0.nupkg.sha512",
     "/home/devadam/.nuget/packages/azure.identity/1.7.0/azure.identity.1.7.0.nupkg.sha512",
